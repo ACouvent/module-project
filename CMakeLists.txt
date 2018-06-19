@@ -14,9 +14,9 @@ ENABLE_TESTING()
 ADD_TEST( test1 demo )
 ADD_TEST( test2 demo )
 
-FIND_PACKAGE(doxygen)
+FIND_PACKAGE(Doxygen)
 IF(DOXYGEN_FOUND)
-	ADD_CUSTOM_COMMAND("make doc")
+	ADD_CUSTOM_TARGET(doc doxygen Doxyfile)
 ENDIF()
 	
 
