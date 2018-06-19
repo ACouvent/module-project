@@ -16,7 +16,7 @@ ADD_TEST( test2 demo )
 
 FIND_PACKAGE(Doxygen)
 IF(DOXYGEN_FOUND)
-	ADD_CUSTOM_TARGET(doc doxygen Doxyfile)
+	ADD_CUSTOM_TARGET(doc doxygen ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile)
 ENDIF()
 	
 
