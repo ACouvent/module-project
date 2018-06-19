@@ -1,4 +1,5 @@
-
 ADD_EXECUTABLE(demo demo.cpp)
 
-ADD_LIBRARY(student student.cpp student.h)
+ADD_LIBRARY(student STATIC student.cpp)
+
+TARGET_LINK_LIBRARIES(demo student)
