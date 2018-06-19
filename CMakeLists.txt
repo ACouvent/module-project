@@ -1,3 +1,5 @@
+cmake_minimum_required(VERSION 3.5)
+
 ADD_EXECUTABLE(demo demo.cpp)
 ADD_EXECUTABLE(test1 test1.cpp)
 ADD_EXECUTABLE(test2 test2.cpp)
@@ -12,4 +14,9 @@ ENABLE_TESTING()
 ADD_TEST( test1 demo )
 ADD_TEST( test2 demo )
 
+FIND_PACKAGE(doxygen)
+IF(DOXYGEN_FOUND)
+	ADD_CUSTOM_COMMAND("make doc")
+ENDIF()
+	
 
